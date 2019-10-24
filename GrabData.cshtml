@@ -1,0 +1,14 @@
+﻿@page
+@model CandyCaneLane1._1.Pages.GrabDataModel
+@{
+    ViewData["Title"] = "GrabData";
+}
+
+<h1>GrabData</h1>
+
+
+@foreach (var a_list in Model.Candies)
+{
+    <h1>@a_list.CandyName</h1>
+   <a asp-page="./indiv" asp-route-id="@a_list.CandyID">GO To Indiv!</a>
+}
